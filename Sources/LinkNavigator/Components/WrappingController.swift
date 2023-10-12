@@ -29,6 +29,7 @@ public final class WrappingController<Content: View>: UIHostingController<Conten
     self.matchPath = matchPath
     super.init(rootView: content())
     super.title = title
+    super.navigationController?.navigationItem.setHidesBackButton(true, animated: false)
   }
 
   required init?(coder _: NSCoder) {
